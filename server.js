@@ -15,7 +15,7 @@ app.use(cors({ optionsSuccessStatus: 200 }));  // some legacy browsers choke on 
 app.use(express.static('public'));
 
 app.get("/api/whoami", function (req, res) {
-  res.json({ ipaddress: req.socket.remoteAddress, langauge: req.headers['accept-language'], software: req.get('user-agent') });
+  res.json({ ipaddress: req.socket.remoteAddress, language: req.headers['accept-language'], software: req.get('user-agent') });
 });
 
 // http://expressjs.com/en/starter/basic-routing.html
